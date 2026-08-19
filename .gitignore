@@ -1,0 +1,11 @@
+node_modules/
+dist/
+public/assets/familie/
+public/assets/vendor/
+public/assets/kaart/
+public/assets/interieur/
+public/assets/ui/
+public/assets/battlers/
+public/assets/dorp/
+scripts/contact/
+scripts/debug/

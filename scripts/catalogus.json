@@ -1,0 +1,1150 @@
+{
+ "me_huis": [
+  {
+   "id": "h0",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    18,
+    4,
+    863,
+    767
+   ]
+  },
+  {
+   "id": "h1",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    912,
+    96,
+    1055,
+    239
+   ]
+  },
+  {
+   "id": "h2",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    1152,
+    96,
+    1295,
+    239
+   ]
+  },
+  {
+   "id": "h3",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    912,
+    336,
+    1055,
+    479
+   ]
+  },
+  {
+   "id": "h4",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    1152,
+    336,
+    1295,
+    479
+   ]
+  },
+  {
+   "id": "h5",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    912,
+    576,
+    1055,
+    719
+   ]
+  },
+  {
+   "id": "h6",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    1152,
+    576,
+    1295,
+    719
+   ]
+  },
+  {
+   "id": "h7",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    18,
+    772,
+    863,
+    1535
+   ]
+  },
+  {
+   "id": "h8",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    874,
+    1038,
+    1385,
+    1373
+   ]
+  },
+  {
+   "id": "h9",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    34,
+    1584,
+    575,
+    2297
+   ]
+  },
+  {
+   "id": "h10",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    610,
+    1584,
+    1151,
+    2283
+   ]
+  },
+  {
+   "id": "h11",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    30,
+    2448,
+    575,
+    3195
+   ]
+  },
+  {
+   "id": "h12",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    606,
+    2448,
+    1151,
+    3147
+   ]
+  },
+  {
+   "id": "h13",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    1164,
+    2962,
+    1493,
+    3147
+   ]
+  },
+  {
+   "id": "h14",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    30,
+    3216,
+    575,
+    3911
+   ]
+  },
+  {
+   "id": "h15",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    606,
+    3216,
+    1151,
+    3911
+   ]
+  },
+  {
+   "id": "h16",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    1206,
+    3318,
+    1341,
+    3449
+   ]
+  },
+  {
+   "id": "h17",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    0,
+    4032,
+    479,
+    4731
+   ]
+  },
+  {
+   "id": "h18",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    528,
+    4032,
+    1007,
+    4731
+   ]
+  },
+  {
+   "id": "h19",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    1056,
+    4032,
+    1535,
+    4727
+   ]
+  },
+  {
+   "id": "h20",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    0,
+    4752,
+    479,
+    5465
+   ]
+  },
+  {
+   "id": "h21",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    528,
+    4752,
+    1007,
+    5499
+   ]
+  },
+  {
+   "id": "h22",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    1056,
+    4752,
+    1535,
+    5447
+   ]
+  },
+  {
+   "id": "h23",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    48,
+    5544,
+    527,
+    5999
+   ]
+  },
+  {
+   "id": "h24",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    576,
+    5544,
+    1055,
+    5999
+   ]
+  },
+  {
+   "id": "h25",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    48,
+    6024,
+    527,
+    6479
+   ]
+  },
+  {
+   "id": "h26",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    576,
+    6048,
+    1055,
+    6623
+   ]
+  },
+  {
+   "id": "h27",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    4,
+    6624,
+    1103,
+    7289
+   ]
+  },
+  {
+   "id": "h28",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    1116,
+    6750,
+    1295,
+    6935
+   ]
+  },
+  {
+   "id": "h29",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    1344,
+    6750,
+    1527,
+    6935
+   ]
+  },
+  {
+   "id": "h30",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    1116,
+    6990,
+    1295,
+    7149
+   ]
+  },
+  {
+   "id": "h31",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    1344,
+    6990,
+    1523,
+    7149
+   ]
+  },
+  {
+   "id": "h32",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    78,
+    7326,
+    807,
+    7571
+   ]
+  },
+  {
+   "id": "h33",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    1056,
+    7326,
+    1269,
+    7511
+   ]
+  },
+  {
+   "id": "h34",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    816,
+    7344,
+    959,
+    7487
+   ]
+  },
+  {
+   "id": "h35",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    48,
+    7602,
+    959,
+    8777
+   ]
+  },
+  {
+   "id": "h36",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    1156,
+    7602,
+    1437,
+    8777
+   ]
+  },
+  {
+   "id": "h37",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    970,
+    8230,
+    1113,
+    8663
+   ]
+  },
+  {
+   "id": "h38",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    48,
+    8802,
+    815,
+    9977
+   ]
+  },
+  {
+   "id": "h39",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    972,
+    8802,
+    1389,
+    9977
+   ]
+  },
+  {
+   "id": "h40",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    912,
+    9996,
+    1487,
+    11039
+   ]
+  },
+  {
+   "id": "h41",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    0,
+    10018,
+    849,
+    11039
+   ]
+  },
+  {
+   "id": "h42",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    0,
+    11104,
+    849,
+    11855
+   ]
+  },
+  {
+   "id": "h43",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    960,
+    11104,
+    1233,
+    11855
+   ]
+  },
+  {
+   "id": "h44",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    0,
+    12000,
+    743,
+    12815
+   ]
+  },
+  {
+   "id": "h45",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    768,
+    12000,
+    1535,
+    12815
+   ]
+  },
+  {
+   "id": "h46",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    0,
+    12834,
+    615,
+    13269
+   ]
+  },
+  {
+   "id": "h47",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    772,
+    12858,
+    959,
+    13199
+   ]
+  },
+  {
+   "id": "h48",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    1000,
+    12858,
+    1127,
+    13199
+   ]
+  },
+  {
+   "id": "h49",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    1156,
+    13114,
+    1343,
+    13293
+   ]
+  },
+  {
+   "id": "h50",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    288,
+    13296,
+    431,
+    13439
+   ]
+  },
+  {
+   "id": "h51",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    1012,
+    13444,
+    1245,
+    13727
+   ]
+  },
+  {
+   "id": "h52",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    22,
+    13470,
+    909,
+    14495
+   ]
+  },
+  {
+   "id": "h53",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    1210,
+    14148,
+    1383,
+    14303
+   ]
+  },
+  {
+   "id": "h54",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    1396,
+    14194,
+    1533,
+    14349
+   ]
+  },
+  {
+   "id": "h55",
+   "bron": "24_Additional_Houses_48x48.png",
+   "bbox": [
+    1210,
+    14340,
+    1383,
+    14495
+   ]
+  }
+ ],
+ "me_villa": [
+  {
+   "id": "v0",
+   "bron": "7_Villas_48x48.png",
+   "bbox": [
+    0,
+    0,
+    431,
+    623
+   ]
+  },
+  {
+   "id": "v1",
+   "bron": "7_Villas_48x48.png",
+   "bbox": [
+    480,
+    0,
+    911,
+    623
+   ]
+  },
+  {
+   "id": "v2",
+   "bron": "7_Villas_48x48.png",
+   "bbox": [
+    960,
+    0,
+    1391,
+    623
+   ]
+  },
+  {
+   "id": "v3",
+   "bron": "7_Villas_48x48.png",
+   "bbox": [
+    0,
+    672,
+    431,
+    1391
+   ]
+  },
+  {
+   "id": "v4",
+   "bron": "7_Villas_48x48.png",
+   "bbox": [
+    480,
+    672,
+    1439,
+    1343
+   ]
+  },
+  {
+   "id": "v5",
+   "bron": "7_Villas_48x48.png",
+   "bbox": [
+    816,
+    1392,
+    1197,
+    1637
+   ]
+  },
+  {
+   "id": "v6",
+   "bron": "7_Villas_48x48.png",
+   "bbox": [
+    1200,
+    1392,
+    1391,
+    1583
+   ]
+  },
+  {
+   "id": "v7",
+   "bron": "7_Villas_48x48.png",
+   "bbox": [
+    0,
+    1440,
+    815,
+    1967
+   ]
+  },
+  {
+   "id": "v8",
+   "bron": "7_Villas_48x48.png",
+   "bbox": [
+    1104,
+    1852,
+    1245,
+    2015
+   ]
+  },
+  {
+   "id": "v9",
+   "bron": "7_Villas_48x48.png",
+   "bbox": [
+    1206,
+    1842,
+    1389,
+    2109
+   ]
+  },
+  {
+   "id": "v10",
+   "bron": "7_Villas_48x48.png",
+   "bbox": [
+    0,
+    1980,
+    431,
+    2207
+   ]
+  },
+  {
+   "id": "v11",
+   "bron": "7_Villas_48x48.png",
+   "bbox": [
+    816,
+    2020,
+    1083,
+    2255
+   ]
+  },
+  {
+   "id": "v12",
+   "bron": "7_Villas_48x48.png",
+   "bbox": [
+    600,
+    2070,
+    803,
+    2255
+   ]
+  },
+  {
+   "id": "v13",
+   "bron": "7_Villas_48x48.png",
+   "bbox": [
+    1200,
+    2112,
+    1437,
+    2301
+   ]
+  },
+  {
+   "id": "v14",
+   "bron": "7_Villas_48x48.png",
+   "bbox": [
+    384,
+    2232,
+    791,
+    2721
+   ]
+  },
+  {
+   "id": "v15",
+   "bron": "7_Villas_48x48.png",
+   "bbox": [
+    820,
+    2304,
+    999,
+    2495
+   ]
+  },
+  {
+   "id": "v16",
+   "bron": "7_Villas_48x48.png",
+   "bbox": [
+    816,
+    2500,
+    1055,
+    2721
+   ]
+  }
+ ],
+ "me_markt": [
+  {
+   "id": "S1",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Small_1.png",
+   "bbox": [
+    0,
+    27,
+    240,
+    384
+   ]
+  },
+  {
+   "id": "S2",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Small_2.png",
+   "bbox": [
+    0,
+    27,
+    240,
+    384
+   ]
+  },
+  {
+   "id": "S3",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Small_3.png",
+   "bbox": [
+    0,
+    18,
+    240,
+    384
+   ]
+  },
+  {
+   "id": "S4",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Small_4.png",
+   "bbox": [
+    0,
+    18,
+    240,
+    384
+   ]
+  },
+  {
+   "id": "S5",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Small_5.png",
+   "bbox": [
+    0,
+    27,
+    240,
+    384
+   ]
+  },
+  {
+   "id": "S6",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Small_6.png",
+   "bbox": [
+    0,
+    27,
+    240,
+    384
+   ]
+  },
+  {
+   "id": "S7",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Small_7.png",
+   "bbox": [
+    0,
+    18,
+    240,
+    384
+   ]
+  },
+  {
+   "id": "S8",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Small_8.png",
+   "bbox": [
+    0,
+    18,
+    240,
+    384
+   ]
+  },
+  {
+   "id": "S9",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Small_9.png",
+   "bbox": [
+    0,
+    27,
+    240,
+    384
+   ]
+  },
+  {
+   "id": "S10",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Small_10.png",
+   "bbox": [
+    0,
+    27,
+    240,
+    384
+   ]
+  },
+  {
+   "id": "S11",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Small_11.png",
+   "bbox": [
+    0,
+    18,
+    240,
+    384
+   ]
+  },
+  {
+   "id": "S12",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Small_12.png",
+   "bbox": [
+    0,
+    18,
+    240,
+    384
+   ]
+  },
+  {
+   "id": "M1",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Medium_1.png",
+   "bbox": [
+    0,
+    27,
+    336,
+    432
+   ]
+  },
+  {
+   "id": "M2",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Medium_2.png",
+   "bbox": [
+    0,
+    27,
+    336,
+    432
+   ]
+  },
+  {
+   "id": "M3",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Medium_3.png",
+   "bbox": [
+    0,
+    15,
+    336,
+    432
+   ]
+  },
+  {
+   "id": "M4",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Medium_4.png",
+   "bbox": [
+    0,
+    15,
+    336,
+    432
+   ]
+  },
+  {
+   "id": "M5",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Medium_5.png",
+   "bbox": [
+    0,
+    27,
+    336,
+    432
+   ]
+  },
+  {
+   "id": "M6",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Medium_6.png",
+   "bbox": [
+    0,
+    27,
+    336,
+    432
+   ]
+  },
+  {
+   "id": "M7",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Medium_7.png",
+   "bbox": [
+    0,
+    15,
+    336,
+    432
+   ]
+  },
+  {
+   "id": "M8",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Medium_8.png",
+   "bbox": [
+    0,
+    15,
+    336,
+    432
+   ]
+  },
+  {
+   "id": "M9",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Medium_9.png",
+   "bbox": [
+    0,
+    27,
+    336,
+    432
+   ]
+  },
+  {
+   "id": "M10",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Medium_10.png",
+   "bbox": [
+    0,
+    27,
+    336,
+    432
+   ]
+  },
+  {
+   "id": "M11",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Medium_11.png",
+   "bbox": [
+    0,
+    15,
+    336,
+    432
+   ]
+  },
+  {
+   "id": "M12",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Medium_12.png",
+   "bbox": [
+    0,
+    15,
+    336,
+    432
+   ]
+  },
+  {
+   "id": "B1",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Big_1.png",
+   "bbox": [
+    0,
+    33,
+    336,
+    576
+   ]
+  },
+  {
+   "id": "B2",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Big_2.png",
+   "bbox": [
+    0,
+    21,
+    336,
+    576
+   ]
+  },
+  {
+   "id": "B3",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Big_3.png",
+   "bbox": [
+    0,
+    33,
+    336,
+    576
+   ]
+  },
+  {
+   "id": "B4",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Big_4.png",
+   "bbox": [
+    0,
+    21,
+    336,
+    576
+   ]
+  },
+  {
+   "id": "B5",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Big_5.png",
+   "bbox": [
+    0,
+    33,
+    336,
+    576
+   ]
+  },
+  {
+   "id": "B6",
+   "bron": "9_Shopping_Center_and_Markets_Singles_48x48\\ME_Singles_Shopping_Center_and_Markets_48x48_Market_Big_6.png",
+   "bbox": [
+    0,
+    21,
+    336,
+    576
+   ]
+  }
+ ],
+ "thema": [
+  {
+   "id": "school",
+   "bron": "C:\\Dev\\games\\familie-assets\\vendor\\modern-exteriors\\Modern_Exteriors_48x48\\ME_Theme_Sorter_48x48\\13_School_Singles_48x48\\ME_Singles_School_48x48_School_1.png",
+   "bbox": [
+    21,
+    12,
+    1131,
+    1104
+   ]
+  },
+  {
+   "id": "klokketoren",
+   "bron": "C:\\Dev\\games\\familie-assets\\vendor\\modern-exteriors\\Modern_Exteriors_48x48\\ME_Theme_Sorter_48x48\\13_School_Singles_48x48\\ME_Singles_School_48x48_Clock_Tower_1.png",
+   "bbox": [
+    15,
+    6,
+    375,
+    702
+   ]
+  },
+  {
+   "id": "brandweer",
+   "bron": "C:\\Dev\\games\\familie-assets\\vendor\\modern-exteriors\\Modern_Exteriors_48x48\\ME_Theme_Sorter_48x48\\18_Fire_Station_Singles_48x48\\ME_Singles_Fire_Station_48x48_Building.png",
+   "bbox": [
+    9,
+    0,
+    762,
+    687
+   ]
+  },
+  {
+   "id": "kerk",
+   "bron": "C:\\Dev\\games\\familie-assets\\vendor\\modern-exteriors\\Modern_Exteriors_48x48\\ME_Theme_Sorter_48x48\\19_Graveyard_Singles_48x48\\ME_Singles_Graveyard_48x48_Grace_Chapel.png",
+   "bbox": [
+    0,
+    9,
+    240,
+    432
+   ]
+  },
+  {
+   "id": "kerk_hek",
+   "bron": "C:\\Dev\\games\\familie-assets\\vendor\\modern-exteriors\\Modern_Exteriors_48x48\\ME_Theme_Sorter_48x48\\19_Graveyard_Singles_48x48\\ME_Singles_Graveyard_48x48_Grace_Chapel_With_Gate.png",
+   "bbox": [
+    0,
+    9,
+    240,
+    432
+   ]
+  },
+  {
+   "id": "farm_huis",
+   "bron": "C:\\Dev\\games\\familie-assets\\vendor\\modern-farm\\48x48\\Single_Files_48x48\\Props_and_Buildings_48x48\\Farmer_House_1_48x48.png",
+   "bbox": [
+    6,
+    36,
+    378,
+    480
+   ]
+  },
+  {
+   "id": "farm_huis2",
+   "bron": "C:\\Dev\\games\\familie-assets\\vendor\\modern-farm\\48x48\\Single_Files_48x48\\Props_and_Buildings_48x48\\Farmer_House_2_48x48.png",
+   "bbox": [
+    3,
+    27,
+    477,
+    432
+   ]
+  },
+  {
+   "id": "schuur",
+   "bron": "C:\\Dev\\games\\familie-assets\\vendor\\modern-farm\\48x48\\Single_Files_48x48\\Props_and_Buildings_48x48\\Barn_Small_48x48.png",
+   "bbox": [
+    12,
+    0,
+    372,
+    480
+   ]
+  },
+  {
+   "id": "silo1",
+   "bron": "C:\\Dev\\games\\familie-assets\\vendor\\modern-farm\\48x48\\Single_Files_48x48\\Props_and_Buildings_48x48\\Silos_1_48x48.png",
+   "bbox": [
+    3,
+    0,
+    327,
+    672
+   ]
+  },
+  {
+   "id": "silo2",
+   "bron": "C:\\Dev\\games\\familie-assets\\vendor\\modern-farm\\48x48\\Single_Files_48x48\\Props_and_Buildings_48x48\\Silos_2_48x48.png",
+   "bbox": [
+    18,
+    0,
+    231,
+    672
+   ]
+  },
+  {
+   "id": "stal",
+   "bron": "C:\\Dev\\games\\familie-assets\\vendor\\modern-farm\\48x48\\Single_Files_48x48\\Props_and_Buildings_48x48\\Stable_Example_Outside_48x48.png",
+   "bbox": [
+    0,
+    0,
+    480,
+    384
+   ]
+  }
+ ]
+}
