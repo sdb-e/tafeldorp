@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="48" tileheight="48" infinite="0" nextlayerid="4" nextobjectid="999">
+ <tileset firstgid="1" source="meubels.tsx"/>
+ <imagelayer id="1" name="shell">
+  <image source="shells/bieb_shell.png" width="768" height="576"/>
+ </imagelayer>
+ <objectgroup id="2" name="kleden">
+  <object id="1" gid="20" name="GEN_kleed_grijs" x="538" y="542" width="124" height="86">
+  </object>
+ </objectgroup>
+ <objectgroup id="3" name="meubels">
+  <object id="2" gid="119" name="KLAS_74" x="24" y="235" width="96" height="120">
+   <properties>
+    <property name="boven" type="float" value="0.55"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="3" gid="117" name="KLAS_70" x="122" y="235" width="81" height="93">
+   <properties>
+    <property name="boven" type="float" value="0.55"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="4" gid="114" name="KLAS_62" x="213" y="235" width="81" height="93">
+   <properties>
+    <property name="boven" type="float" value="0.55"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="5" gid="115" name="KLAS_64" x="305" y="235" width="81" height="120">
+   <properties>
+    <property name="boven" type="float" value="0.55"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="6" gid="118" name="KLAS_72" x="396" y="235" width="81" height="120">
+   <properties>
+    <property name="boven" type="float" value="0.55"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7" gid="29" name="GEN_raam_bruin" x="525" y="122" width="53" height="60">
+   <properties>
+    <property name="boven" type="float" value="0.0"/>
+    <property name="solide" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="8" gid="112" name="KLAS_59" x="718" y="235" width="42" height="120">
+   <properties>
+    <property name="boven" type="float" value="0.55"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="9" gid="111" name="KLAS_49" x="645" y="326" width="63" height="108">
+   <properties>
+    <property name="boven" type="float" value="0.35"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="10" gid="106" name="KLAS_43" x="144" y="384" width="96" height="102">
+   <properties>
+    <property name="boven" type="float" value="0.45"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="11" gid="107" name="KLAS_44" x="312" y="384" width="96" height="102">
+   <properties>
+    <property name="boven" type="float" value="0.45"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="12" gid="109" name="KLAS_46" x="144" y="508" width="96" height="102">
+   <properties>
+    <property name="boven" type="float" value="0.45"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="13" gid="19" name="GEN_grote_tafel" x="552" y="489" width="95" height="129">
+   <properties>
+    <property name="boven" type="float" value="0.3"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="14" gid="137" name="REC_205" x="694" y="475" width="60" height="72">
+   <properties>
+    <property name="boven" type="float" value="0.35"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="15" gid="127" name="LR_84" x="699" y="398" width="45" height="99">
+   <properties>
+    <property name="boven" type="float" value="0.65"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="16" gid="18" name="GEN_boompje" x="43" y="585" width="48" height="93">
+   <properties>
+    <property name="boven" type="float" value="0.5"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

@@ -12,6 +12,25 @@ npm run sync-assets   # kopieert sprites + portretten uit ../familie-assets
 npm run dev           # dev-server, ook bereikbaar op tablet via --host
 ```
 
+## Kamers finetunen in Tiled
+
+De kamerinrichting is visueel bij te stellen in [Tiled](https://www.mapeditor.org)
+(gratis). Eenmalig installeren (vraagt adminrechten):
+`winget install Tiled.Tiled`
+
+1. `python scripts/exporteer-tiled.py` zet per kamer een `tiled/kamer-*.tmx`
+   klaar (bestaande tmx wordt nooit overschreven; terug naar de Python-versie
+   kan met `--force <kamer>`).
+2. Open `tafeldorp.tiled-project` in Tiled, kies een kamer en versleep de
+   meubels en kleden; nieuwe meubels sleep je uit de tileset "meubels".
+   Eigenschappen `boven` (fractie die boven de speler rendert) en `solide`
+   staan per object.
+3. `python scripts/bouw-interieurs.py` bakt de kamers; een kamer met tmx
+   gebruikt automatisch jouw Tiled-versie. Daarna gewoon `npm run build`.
+
+Muren, vloeren, deuren en NPC-plekken blijven in het script; Tiled gaat
+alleen over WAT er staat en WAAR.
+
 ## Publiceren
 
 `npm run build` bouwt naar `docs/`; GitHub Pages serveert vanaf main:/docs

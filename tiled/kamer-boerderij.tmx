@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="14" height="10" tilewidth="48" tileheight="48" infinite="0" nextlayerid="4" nextobjectid="999">
+ <tileset firstgid="1" source="meubels.tsx"/>
+ <imagelayer id="1" name="shell">
+  <image source="shells/boerderij_shell.png" width="672" height="480"/>
+ </imagelayer>
+ <objectgroup id="2" name="kleden">
+ </objectgroup>
+ <objectgroup id="3" name="meubels">
+  <object id="1" gid="143" name="REC_66" x="36" y="232" width="72" height="33">
+   <properties>
+    <property name="boven" type="float" value="0.4"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="2" gid="16" name="FARM_^Manger_Horizontal_Full" x="144" y="230" width="96" height="45">
+   <properties>
+    <property name="boven" type="float" value="0.45"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="3" gid="14" name="FARM_Hay_Manger_Horizontal_Full" x="363" y="230" width="90" height="54">
+   <properties>
+    <property name="boven" type="float" value="0.45"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="4" gid="9" name="FARM_Cow_Sign" x="273" y="242" width="48" height="45">
+   <properties>
+    <property name="boven" type="float" value="0.3"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="5" gid="8" name="FARM_Chicken_Sign" x="494" y="242" width="48" height="45">
+   <properties>
+    <property name="boven" type="float" value="0.3"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="6" gid="5" name="CONF_45" x="555" y="232" width="42" height="63">
+   <properties>
+    <property name="boven" type="float" value="0.4"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7" gid="6" name="CONF_46" x="612" y="232" width="42" height="63">
+   <properties>
+    <property name="boven" type="float" value="0.4"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="8" gid="15" name="FARM_Nest_Chicken" x="96" y="384" width="96" height="144">
+   <properties>
+    <property name="boven" type="float" value="0.3"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="9" gid="12" name="FARM_Hay_Dry_Pile_48" x="565" y="374" width="69" height="48">
+   <properties>
+    <property name="boven" type="float" value="0.3"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="10" gid="10" name="FARM_Hay_Dry_Bits_1" x="271" y="422" width="33" height="21">
+   <properties>
+    <property name="boven" type="float" value="0.0"/>
+    <property name="solide" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="11" gid="11" name="FARM_Hay_Dry_Bits_2" x="487" y="350" width="33" height="24">
+   <properties>
+    <property name="boven" type="float" value="0.0"/>
+    <property name="solide" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="12" gid="13" name="FARM_Hay_Dry_Pile_Small" x="432" y="446" width="48" height="30">
+   <properties>
+    <property name="boven" type="float" value="0.3"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

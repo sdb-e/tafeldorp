@@ -403,7 +403,77 @@ KAMERS = {
     },
 }
 
-def bouw(kid, cfg):
+# Tiled-koppeling: meubel-keys zoals "KEUKEN_296", "GEN_kleed_rood" en
+# "FARM_Hay_Dry_Pile_48" verwijzen terug naar de bronnen hierboven.
+BRONNEN = {"LR": LR, "KEUKEN": KEUKEN, "GROC": GROC, "KLAS": KLAS, "GYM": GYM,
+           "REC": REC, "CONF": CONF, "IJS": IJS, "BED": BED}
+
+
+def key_naar_bron(naam):
+    prefix, rest = naam.split("_", 1)
+    if prefix == "GEN":
+        return "gen", GEN[rest]
+    if prefix == "FARM":
+        return "farm", rest
+    return BRONNEN[prefix], int(rest)
+
+
+def bron_naar_key(map_, nummer):
+    if map_ == "gen":
+        for gnaam, rect in GEN.items():
+            if rect == nummer:
+                return f"GEN_{gnaam}"
+        raise KeyError(f"onbekende GEN-rect {nummer}")
+    if map_ == "farm":
+        return f"FARM_{nummer}"
+    for kort, vol in BRONNEN.items():
+        if vol == map_:
+            return f"{kort}_{nummer}"
+    raise KeyError(f"onbekende bron {map_}")
+
+
+def lees_tmx(pad):
+    """Leest kleden en meubels terug uit een door Stephan bewerkte Tiled-kamer.
+    Nieuwe objecten zonder naam worden via hun gid en tiled/sleutels.json
+    herkend (Tiled zet zelf geen naam op een gesleept tile-object)."""
+    import xml.etree.ElementTree as ET
+    sleutels = {}
+    sleutelpad = pad.parent / "sleutels.json"
+    if sleutelpad.exists():
+        sleutels = json.load(open(sleutelpad, encoding="utf-8"))
+    boom = ET.parse(pad)
+    kleden, meubels = [], []
+    for groep in boom.getroot().iter("objectgroup"):
+        for obj in groep.findall("object"):
+            naam = obj.get("name", "")
+            if not naam and obj.get("gid"):
+                # gid minus firstgid (1); vlag-bits van Tiled wegmaskeren
+                tid = (int(obj.get("gid")) & 0x0FFFFFFF) - 1
+                naam = sleutels.get(str(tid), "")
+            if not naam:
+                continue
+            map_, nummer = key_naar_bron(naam)
+            x = float(obj.get("x", 0))
+            y = float(obj.get("y", 0))  # Tiled tile-objecten: y = onderkant
+            bw = float(obj.get("width", TILE))
+            tx = (x + bw / 2) / TILE - 0.5
+            ty = y / TILE - 1
+            boven_f, solide = 0.4, True
+            props = obj.find("properties")
+            if props is not None:
+                for p in props.findall("property"):
+                    if p.get("name") == "boven":
+                        boven_f = float(p.get("value", 0.4))
+                    elif p.get("name") == "solide":
+                        solide = p.get("value", "true").lower() == "true"
+            if groep.get("name") == "kleden":
+                kleden.append((map_, nummer, tx, ty))
+            else:
+                meubels.append((map_, nummer, tx, ty, boven_f, solide))
+    return kleden, meubels
+
+
+def bouw(kid, cfg, shell_pad=None):
     B, Hh = cfg["b"], cfg["h"]
     w, h = B * TILE, Hh * TILE
     onder = Image.new("RGBA", (w, h), (24, 21, 33, 255))
@@ -519,6 +589,17 @@ def bouw(kid, cfg):
         [0, h - ZUID - 4, deur_x0, ZUID + 4],
         [deur_x1, h - ZUID - 4, w - deur_x1, ZUID + 4],
     ] + binnen_collisions
+
+    if shell_pad is not None:
+        # kale kamer-shell (vloer plus muren) voor de Tiled-achtergrond
+        onder.convert("RGB").save(shell_pad)
+
+    # meubels en kleden uit Tiled overrulen de Python-config zodra Stephan
+    # een kamer in Tiled heeft: tiled/kamer-<id>.tmx is dan de bron
+    tmx = ROOT / "tiled" / f"kamer-{kid}.tmx"
+    if tmx.exists():
+        cfg = dict(cfg)
+        cfg["kleden"], cfg["meubels"] = lees_tmx(tmx)
 
     # vloerkleden: onder alle meubels, geen botsing
     for (kmap, knr, ktx, kty) in cfg.get("kleden", []):

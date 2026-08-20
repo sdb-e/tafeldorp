@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="13" height="10" tilewidth="48" tileheight="48" infinite="0" nextlayerid="4" nextobjectid="999">
+ <tileset firstgid="1" source="meubels.tsx"/>
+ <imagelayer id="1" name="shell">
+  <image source="shells/ijssalon_shell.png" width="624" height="480"/>
+ </imagelayer>
+ <objectgroup id="2" name="kleden">
+  <object id="1" gid="89" name="KEUKEN_259" x="265" y="441" width="93" height="72">
+  </object>
+ </objectgroup>
+ <objectgroup id="3" name="meubels">
+  <object id="2" gid="77" name="IJS_2" x="65" y="235" width="90" height="102">
+   <properties>
+    <property name="boven" type="float" value="0.5"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="3" gid="31" name="GEN_raam_gordijn_roze" x="283" y="122" width="105" height="94">
+   <properties>
+    <property name="boven" type="float" value="0.0"/>
+    <property name="solide" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="4" gid="76" name="IJS_13" x="414" y="120" width="84" height="84">
+   <properties>
+    <property name="boven" type="float" value="0.0"/>
+    <property name="solide" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="5" gid="75" name="IJS_101" x="511" y="235" width="81" height="81">
+   <properties>
+    <property name="boven" type="float" value="0.5"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="6" gid="78" name="IJS_28" x="120" y="316" width="48" height="75">
+   <properties>
+    <property name="boven" type="float" value="0.35"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7" gid="79" name="IJS_34" x="201" y="316" width="48" height="75">
+   <properties>
+    <property name="boven" type="float" value="0.35"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="8" gid="80" name="IJS_43" x="283" y="316" width="48" height="75">
+   <properties>
+    <property name="boven" type="float" value="0.35"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="9" gid="74" name="IJS_100" x="353" y="316" width="81" height="60">
+   <properties>
+    <property name="boven" type="float" value="0.35"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="10" gid="81" name="IJS_75" x="562" y="412" width="36" height="93">
+   <properties>
+    <property name="boven" type="float" value="0.5"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="11" gid="129" name="REC_1" x="108" y="451" width="72" height="72">
+   <properties>
+    <property name="boven" type="float" value="0.3"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="12" gid="130" name="REC_103" x="73" y="446" width="36" height="51">
+   <properties>
+    <property name="boven" type="float" value="0.25"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="13" gid="131" name="REC_105" x="178" y="446" width="36" height="51">
+   <properties>
+    <property name="boven" type="float" value="0.25"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="14" gid="135" name="REC_2" x="477" y="446" width="72" height="72">
+   <properties>
+    <property name="boven" type="float" value="0.3"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="15" gid="132" name="REC_107" x="442" y="441" width="36" height="51">
+   <properties>
+    <property name="boven" type="float" value="0.25"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

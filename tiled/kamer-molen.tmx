@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="12" height="10" tilewidth="48" tileheight="48" infinite="0" nextlayerid="4" nextobjectid="999">
+ <tileset firstgid="1" source="meubels.tsx"/>
+ <imagelayer id="1" name="shell">
+  <image source="shells/molen_shell.png" width="576" height="480"/>
+ </imagelayer>
+ <objectgroup id="2" name="kleden">
+ </objectgroup>
+ <objectgroup id="3" name="meubels">
+  <object id="1" gid="141" name="REC_64" x="45" y="232" width="72" height="87">
+   <properties>
+    <property name="boven" type="float" value="0.4"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="2" gid="142" name="REC_65" x="127" y="230" width="72" height="48">
+   <properties>
+    <property name="boven" type="float" value="0.4"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="3" gid="50" name="GROC_436" x="216" y="228" width="96" height="72">
+   <properties>
+    <property name="boven" type="float" value="0.3"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="4" gid="51" name="GROC_437" x="302" y="228" width="96" height="57">
+   <properties>
+    <property name="boven" type="float" value="0.3"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="5" gid="5" name="CONF_45" x="435" y="232" width="42" height="63">
+   <properties>
+    <property name="boven" type="float" value="0.4"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="6" gid="6" name="CONF_46" x="497" y="232" width="42" height="63">
+   <properties>
+    <property name="boven" type="float" value="0.4"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7" gid="105" name="KLAS_41" x="519" y="268" width="36" height="60">
+   <properties>
+    <property name="boven" type="float" value="0.6"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="8" gid="12" name="FARM_Hay_Dry_Pile_48" x="85" y="398" width="69" height="48">
+   <properties>
+    <property name="boven" type="float" value="0.3"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="9" gid="13" name="FARM_Hay_Dry_Pile_Small" x="470" y="412" width="48" height="30">
+   <properties>
+    <property name="boven" type="float" value="0.3"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="10" gid="47" name="GROC_305" x="386" y="278" width="33" height="60">
+   <properties>
+    <property name="boven" type="float" value="0.3"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

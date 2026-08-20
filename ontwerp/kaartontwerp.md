@@ -85,6 +85,11 @@ volledig profiel en nette einden; witte randen lopen om de hoeken door.
 Per kamer een `muurtint` (multiply over het vlak) voor eigen sfeer. De
 Home Designs zelf (complete shells) zijn een optie voor latere upgrades.
 
+Finetunen (20 aug 2026, wens Stephan): kamers zijn bewerkbaar in Tiled via
+`scripts/exporteer-tiled.py` (shell als achtergrond, meubels als
+tile-objecten); `bouw-interieurs.py` leest een aanwezige
+`tiled/kamer-*.tmx` automatisch terug. Zie README.
+
 Assets: Modern Interiors thema-singles op nummer, gekozen via de contact
 sheets uit `scripts/contact-interieurs.py` (output `scripts/contact/`,
 gitignored). Generic-items (kleden, ramen, banken, planten) komen als

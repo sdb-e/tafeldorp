@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="14" height="13" tilewidth="48" tileheight="48" infinite="0" nextlayerid="4" nextobjectid="999">
+ <tileset firstgid="1" source="meubels.tsx"/>
+ <imagelayer id="1" name="shell">
+  <image source="shells/kerk_shell.png" width="672" height="624"/>
+ </imagelayer>
+ <objectgroup id="2" name="kleden">
+  <object id="1" gid="23" name="GEN_kleed_paars" x="277" y="345" width="165" height="167">
+  </object>
+  <object id="2" gid="25" name="GEN_loper_bruin" x="321" y="643" width="77" height="278">
+  </object>
+ </objectgroup>
+ <objectgroup id="3" name="meubels">
+  <object id="3" gid="7" name="CONF_6" x="61" y="244" width="69" height="111">
+   <properties>
+    <property name="boven" type="float" value="0.7"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="4" gid="4" name="CONF_4" x="600" y="244" width="48" height="111">
+   <properties>
+    <property name="boven" type="float" value="0.7"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="5" gid="3" name="CONF_26" x="336" y="259" width="48" height="54">
+   <properties>
+    <property name="boven" type="float" value="0.4"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="6" gid="139" name="REC_61" x="260" y="249" width="27" height="51">
+   <properties>
+    <property name="boven" type="float" value="0.35"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7" gid="140" name="REC_63" x="432" y="249" width="27" height="51">
+   <properties>
+    <property name="boven" type="float" value="0.35"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="8" gid="17" name="GEN_bankje" x="136" y="432" width="83" height="49">
+   <properties>
+    <property name="boven" type="float" value="0.25"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="9" gid="17" name="GEN_bankje" x="222" y="432" width="83" height="49">
+   <properties>
+    <property name="boven" type="float" value="0.25"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="10" gid="17" name="GEN_bankje" x="414" y="432" width="83" height="49">
+   <properties>
+    <property name="boven" type="float" value="0.25"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="11" gid="17" name="GEN_bankje" x="500" y="432" width="83" height="49">
+   <properties>
+    <property name="boven" type="float" value="0.25"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="12" gid="17" name="GEN_bankje" x="136" y="508" width="83" height="49">
+   <properties>
+    <property name="boven" type="float" value="0.25"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="13" gid="17" name="GEN_bankje" x="222" y="508" width="83" height="49">
+   <properties>
+    <property name="boven" type="float" value="0.25"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="14" gid="17" name="GEN_bankje" x="414" y="508" width="83" height="49">
+   <properties>
+    <property name="boven" type="float" value="0.25"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="15" gid="17" name="GEN_bankje" x="500" y="508" width="83" height="49">
+   <properties>
+    <property name="boven" type="float" value="0.25"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="16" gid="17" name="GEN_bankje" x="136" y="585" width="83" height="49">
+   <properties>
+    <property name="boven" type="float" value="0.25"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="17" gid="17" name="GEN_bankje" x="222" y="585" width="83" height="49">
+   <properties>
+    <property name="boven" type="float" value="0.25"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="18" gid="17" name="GEN_bankje" x="414" y="585" width="83" height="49">
+   <properties>
+    <property name="boven" type="float" value="0.25"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="19" gid="17" name="GEN_bankje" x="500" y="585" width="83" height="49">
+   <properties>
+    <property name="boven" type="float" value="0.25"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="20" gid="18" name="GEN_boompje" x="52" y="600" width="48" height="93">
+   <properties>
+    <property name="boven" type="float" value="0.5"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="21" gid="18" name="GEN_boompje" x="619" y="600" width="48" height="93">
+   <properties>
+    <property name="boven" type="float" value="0.5"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="48" tileheight="48" infinite="0" nextlayerid="4" nextobjectid="999">
+ <tileset firstgid="1" source="meubels.tsx"/>
+ <imagelayer id="1" name="shell">
+  <image source="shells/supermarkt_shell.png" width="768" height="576"/>
+ </imagelayer>
+ <objectgroup id="2" name="kleden">
+ </objectgroup>
+ <objectgroup id="3" name="meubels">
+  <object id="1" gid="41" name="GROC_2" x="59" y="117" width="45" height="24">
+   <properties>
+    <property name="boven" type="float" value="0.0"/>
+    <property name="solide" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="2" gid="52" name="GROC_61" x="205" y="235" width="78" height="108">
+   <properties>
+    <property name="boven" type="float" value="0.5"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="3" gid="53" name="GROC_66" x="301" y="235" width="78" height="108">
+   <properties>
+    <property name="boven" type="float" value="0.5"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="4" gid="54" name="GROC_71" x="397" y="235" width="78" height="108">
+   <properties>
+    <property name="boven" type="float" value="0.5"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="5" gid="48" name="GROC_427" x="504" y="235" width="96" height="99">
+   <properties>
+    <property name="boven" type="float" value="0.45"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="6" gid="49" name="GROC_428" x="609" y="235" width="96" height="96">
+   <properties>
+    <property name="boven" type="float" value="0.45"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7" gid="55" name="GROC_88" x="700" y="117" width="48" height="21">
+   <properties>
+    <property name="boven" type="float" value="0.0"/>
+    <property name="solide" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="8" gid="40" name="GROC_171" x="87" y="369" width="84" height="96">
+   <properties>
+    <property name="boven" type="float" value="0.35"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="9" gid="38" name="GROC_121" x="60" y="451" width="42" height="48">
+   <properties>
+    <property name="boven" type="float" value="0.3"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="10" gid="57" name="GROC_98" x="312" y="408" width="48" height="117">
+   <properties>
+    <property name="boven" type="float" value="0.5"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="11" gid="36" name="GROC_100" x="456" y="408" width="48" height="117">
+   <properties>
+    <property name="boven" type="float" value="0.5"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="12" gid="37" name="GROC_102" x="600" y="408" width="48" height="117">
+   <properties>
+    <property name="boven" type="float" value="0.5"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="13" gid="39" name="GROC_148" x="675" y="360" width="90" height="69">
+   <properties>
+    <property name="boven" type="float" value="0.35"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="14" gid="27" name="GEN_potplant_2" x="43" y="580" width="58" height="87">
+   <properties>
+    <property name="boven" type="float" value="0.55"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="15" gid="28" name="GEN_potplant_3" x="705" y="580" width="57" height="90">
+   <properties>
+    <property name="boven" type="float" value="0.55"/>
+    <property name="solide" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
