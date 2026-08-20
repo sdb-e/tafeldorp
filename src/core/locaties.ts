@@ -85,10 +85,10 @@ interface NpcPlek {
 // waar de NPC in de kamer staat (tile-coordinaten)
 export const NPC_PLEK: Record<string, NpcPlek> = {
   thuis: { tx: 3.2, ty: 5.6 },
-  bakkerij: { tx: 5.5, ty: 4.8 },
+  bakkerij: { tx: 4.6, ty: 4.8 },
   school: { tx: 3, ty: 6.4 },
   molen: { tx: 6.5, ty: 5.4 },
-  supermarkt: { tx: 3, ty: 5.4 },
+  supermarkt: { tx: 2.2, ty: 5.5 },
   boerderij: { tx: 7, ty: 5.2 },
   bieb: { tx: 13.6, ty: 4.6 },
   sporthal: { tx: 9, ty: 6.2 },

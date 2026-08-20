@@ -58,10 +58,10 @@ RAND_LICHT = (214, 210, 224, 255)
 # NPC-plekken (spiegel van src/core/locaties.ts) voor de debug-render
 NPC_PLEK = {
     "thuis": {"tx": 3.2, "ty": 5.6},
-    "bakkerij": {"tx": 5.5, "ty": 4.8},
+    "bakkerij": {"tx": 4.6, "ty": 4.8},
     "school": {"tx": 3, "ty": 6.4},
     "molen": {"tx": 6.5, "ty": 5.4},
-    "supermarkt": {"tx": 3, "ty": 5.4},
+    "supermarkt": {"tx": 2.2, "ty": 5.5},
     "boerderij": {"tx": 7, "ty": 5.2},
     "bieb": {"tx": 13.6, "ty": 4.6},
     "sporthal": {"tx": 9, "ty": 6.2},
@@ -167,9 +167,8 @@ KAMERS = {
         "hwanden": [(8, 0, 17, 13, 14)],    # boven | beneden, deur boven de mat
         "vwanden": [(8, 10, 14, 11, 12)],   # slaapkamer | hal, met deur
         "kleden": [
-            ("gen", GEN["kleed_rood"], 12.6, 7.6),      # zithoek woonkamer
+            ("gen", GEN["kleed_rood"], 12.6, 6.85),     # zithoek, vrij van de muur
             (KEUKEN, 246, 4, 7.3),                       # onder de eettafel
-            ("gen", GEN["kleed_klein_blauw"], 3.9, 12.4),  # slaapkamer
             ("gen", GEN["kleed_klein_rood"], 13, 12.6),  # hal, voor de deur
         ],
         "meubels": [
@@ -181,6 +180,7 @@ KAMERS = {
             (KEUKEN, 113, 5.4, 3.85, 0.45),  # aanrecht
             ("gen", GEN["raam_hout"], 6.6, 1.3, 0.0, False),
             (KEUKEN, 296, 4, 6.6, 0.3),     # eettafel
+            (KEUKEN, 384, 4, 6.68, 0.0, False),   # bord met eten op tafel
             (KEUKEN, 371, 2.7, 6.5, 0.3), (KEUKEN, 368, 5.3, 6.5, 0.3),
             # woonkamer: haard, klok, zithoek op het kleed
             (LR, 89, 10, 4, 0.65),          # staande klok
@@ -188,15 +188,16 @@ KAMERS = {
             (LR, 110, 14, 4, 0.55),         # haard
             ("gen", GEN["schilderij_vuur"], 16.2, 1.3, 0.0, False),
             (LR, 37, 16.4, 4, 0.55),        # kast
-            (LR, 29, 12, 5.9, 0.35),        # bank...
-            (REC, 112, 12.1, 7.1, 0.2),     # ...kijkt naar de salontafel
-            (REC, 204, 14.7, 6.1, 0.35),    # fauteuil
+            (LR, 29, 12, 5.9, 0.35),        # bank op het kleed
+            (REC, 204, 14.7, 5.9, 0.35),    # fauteuil
             ("gen", GEN["palm"], 16.6, 7.3, 0.55),
             # slaapkamer en hal
             (BED, 224, 2, 13.7, 0.35),      # tweepersoonsbed (papa en mama)
+            (LR, 63, 4.1, 13.5, 0.4),       # nachtkastje tussen de bedden
             (BED, 125, 5.8, 13.7, 0.45),    # stapelbed (Eleanor en Ward)
             ("gen", GEN["schilderij_landschap"], 10.5, 9.95, 0.0, False),
-            ("gen", GEN["bankje"], 9.5, 13.9, 0.3),
+            ("gen", GEN["bankje"], 10.5, 11.4, 0.3),   # onder het schilderij
+            (LR, 70, 15, 10.85, 0.45),      # dressoir in de hal
             (LR, 18, 16.6, 13.5, 0.4),      # plant in de hal
         ],
     },
@@ -204,17 +205,17 @@ KAMERS = {
     # toonbank met vitrines scheidt papa (5.5, 4.4) van de klantenruimte.
     "bakkerij": {
         "b": 14, "h": 10, "vloer": "beige", "wand": "streep",
-        "kleden": [(KEUKEN, 226, 10.5, 8.8)],
+        "kleden": [(KEUKEN, 226, 10.5, 8.4)],
         "meubels": [
             (GROC, 253, 1.6, 3.95, 0.5), (GROC, 254, 3.4, 3.95, 0.5),   # ovens
             (GROC, 203, 5.4, 3.9, 0.5), (GROC, 205, 7.2, 3.9, 0.5),     # broodrekken
             (GROC, 250, 9, 3.9, 0.5),       # stokbroodrek
             ("gen", GEN["raam_rood"], 10.9, 1.3, 0.0, False),
             (GROC, 89, 12.5, 1.15, 0.0, False),   # aanbiedingsbord
-            (KEUKEN, 407, 3.5, 5.6, 0.35), (KEUKEN, 408, 5.5, 5.6, 0.35),  # vitrines
-            (GROC, 171, 7.4, 5.6, 0.35),    # kassa
-            (REC, 3, 10.5, 7.8, 0.3),       # tafeltje in de winkel
-            (REC, 109, 9.3, 7.7, 0.25), (REC, 113, 11.7, 7.75, 0.25),
+            (KEUKEN, 407, 2.6, 5.6, 0.35), (KEUKEN, 408, 4.6, 5.6, 0.35),  # vitrines
+            (GROC, 171, 6.5, 5.6, 0.35),    # kassa
+            (REC, 3, 10.5, 7.6, 0.3),       # tafeltje in de winkel
+            (REC, 109, 9.3, 7.5, 0.25), (REC, 113, 11.7, 7.55, 0.25),
             ("gen", GEN["potplant_2"], 0.9, 8.8, 0.55),
             ("gen", GEN["potplant_3"], 13.1, 8.8, 0.55),
         ],
@@ -226,31 +227,32 @@ KAMERS = {
         "meubels": [
             (GROC, 2, 1, 1.15, 0.0, False),   # OPEN-bord
             (GROC, 61, 4.6, 3.9, 0.5), (GROC, 66, 6.6, 3.9, 0.5), (GROC, 71, 8.6, 3.9, 0.5),
-            (GROC, 405, 11, 3.9, 0.5), (GROC, 408, 13, 3.9, 0.5),  # groentekasten
+            (GROC, 427, 11, 3.9, 0.45), (GROC, 428, 13.2, 3.9, 0.45),  # groente-uitstalling
             (GROC, 88, 14.9, 1.15, 0.0, False),   # prijsbord
-            (GROC, 171, 3, 6.7, 0.35),      # kassa, verkoper erachter
-            (GROC, 121, 1, 7.4, 0.3),       # winkelmanden
+            (GROC, 171, 2.2, 6.7, 0.35),    # kassa bij de muur, verkoper erachter
+            (GROC, 121, 1.2, 8.4, 0.3),     # winkelmanden voor de balie
             (GROC, 98, 6.5, 7.5, 0.5), (GROC, 100, 9.5, 7.5, 0.5), (GROC, 102, 12.5, 7.5, 0.5),
-            (GROC, 148, 13.6, 9.9, 0.35),   # koelvitrine
+            (GROC, 148, 14.5, 6.5, 0.35),   # koelvitrine tegen de oostwand
             ("gen", GEN["potplant_2"], 1, 11.1, 0.55),
+            ("gen", GEN["potplant_3"], 14.8, 11.1, 0.55),
         ],
     },
     # Klaslokaal: bord en kaarten aan de muur, juf (3, 6.4) bij haar bureau,
     # tafeltjes in twee rijen, boekenkasten in de hoeken.
     "school": {
         "b": 16, "h": 12, "vloer": "plankgeel", "wand": "rozeplank",
-        "kleden": [("gen", GEN["kleed_klein_groen"], 2.5, 10.9)],
+        "kleden": [("gen", GEN["kleed_klein_groen"], 3, 7.85)],
         "meubels": [
             (KLAS, 45, 0.9, 3.9, 0.55), (KLAS, 47, 2.6, 3.9, 0.55),  # boekenkasten
             (KLAS, 39, 5.5, 4.2, 0.45),     # schoolbord op poten
             (KLAS, 31, 9.5, 1.15, 0.0, False),   # wereldkaart
             (KLAS, 32, 11.5, 1.15, 0.0, False),  # stickerkaart
             (KLAS, 33, 13.4, 1.15, 0.0, False),  # prikbord
-            (KLAS, 60, 14.65, 3.9, 0.55),   # kast rechtsachter
+            (KLAS, 60, 14.2, 3.9, 0.55),    # kast rechtsachter
             (KLAS, 25, 3, 7.4, 0.3),        # juf-bureau, juf erachter
             (KLAS, 9, 6.5, 7.5, 0.3), (KLAS, 11, 9.5, 7.5, 0.3), (KLAS, 7, 12.5, 7.5, 0.3),
             (KLAS, 15, 6.5, 9.8, 0.3), (KLAS, 17, 9.5, 9.8, 0.3), (KLAS, 21, 12.5, 9.8, 0.3),
-            ("gen", GEN["potplant_3"], 15, 10.9, 0.55),
+            ("gen", GEN["potplant_3"], 13.9, 10.9, 0.55),
         ],
     },
     # Bieb (Stardew-museum): kastenwand achter, lage schappen als eilanden,
@@ -262,12 +264,13 @@ KAMERS = {
             (KLAS, 74, 1, 3.9, 0.55), (KLAS, 70, 2.9, 3.9, 0.55), (KLAS, 62, 4.8, 3.9, 0.55),
             (KLAS, 64, 6.7, 3.9, 0.55), (KLAS, 72, 8.6, 3.9, 0.55),
             ("gen", GEN["raam_bruin"], 11, 1.3, 0.0, False),
+            (KLAS, 59, 14.9, 3.9, 0.55),    # smalle kast in de noordoost-hoek
             (KLAS, 49, 13.6, 5.8, 0.35),    # uitleenbalie
             (KLAS, 43, 3.5, 7, 0.45), (KLAS, 44, 7, 7, 0.45),   # schap-eilanden
-            (KLAS, 46, 5.2, 9.6, 0.45),
+            (KLAS, 46, 3.5, 9.6, 0.45),
             ("gen", GEN["grote_tafel"], 12, 9.2, 0.3),   # leestafel
             (REC, 205, 14.6, 8.9, 0.35),    # fauteuil
-            (LR, 84, 15.1, 7.3, 0.65),      # leeslamp
+            (LR, 84, 14.55, 7.3, 0.65),     # leeslamp
             ("gen", GEN["boompje"], 0.9, 11.2, 0.5),
         ],
     },
@@ -276,18 +279,18 @@ KAMERS = {
     "sporthal": {
         "b": 18, "h": 13, "vloer": "grijs", "wand": "taupe",
         "meubels": [
-            (GYM, 131, 2.2, 3.6, 0.5), (GYM, 131, 4, 3.6, 0.5),   # spiegels
+            (GYM, 131, 2.2, 3.35, 0.5), (GYM, 131, 4, 3.35, 0.5),   # spiegels
             (GYM, 186, 6.5, 4, 0.35), (GYM, 187, 8.5, 4, 0.35),   # loopbanden
             (GYM, 188, 10.5, 4, 0.35),      # crosstrainer
             (GYM, 167, 13.5, 3.95, 0.4), (GYM, 169, 15.7, 3.95, 0.4),  # halterrekken
             (GYM, 96, 2.2, 6.8, 0.35),      # gewichtenbank
             (GYM, 106, 1.5, 8.2, 0.3), (GYM, 107, 2.5, 8.4, 0.3),  # kettlebells
             (GYM, 73, 3.5, 9.6, 0.3),       # gymbal
-            (GYM, 88, 12.5, 6.9, 0.0, False),   # halterstang op de vloer
+            (GYM, 88, 12.55, 8.05, 0.0, False),  # halterstang op de mat
             (GYM, 198, 6.5, 9, 0.0, False), (GYM, 197, 9.5, 9, 0.0, False),
             (GYM, 200, 12.5, 9, 0.0, False),    # matten
             (GYM, 178, 16.6, 6.8, 0.55),    # boksbal
-            (GYM, 75, 15.5, 9.8, 0.3),      # bal
+            (GYM, 75, 16.3, 9.3, 0.3),      # bal bij de boksbal
         ],
     },
     # Molenzolder: opslag langs de wanden, meelzakken en hooi; molenaar
@@ -301,7 +304,7 @@ KAMERS = {
             (KLAS, 41, 10.7, 4.6, 0.6),     # ladder
             ("farm", "Hay_Dry_Pile_48", 2, 7.3, 0.3),
             ("farm", "Hay_Dry_Pile_Small", 9.8, 7.6, 0.3),
-            (GROC, 305, 8.2, 8.2, 0.3),     # weegschaal
+            (GROC, 305, 7.9, 4.8, 0.3),     # weegschaal bij de meelzakken
         ],
     },
     # Kerkzaal: gouden drapes, altaarpodium met bloemen, twee kolommen banken
@@ -322,7 +325,7 @@ KAMERS = {
             ("gen", GEN["bankje"], 9, 9.6, 0.25), ("gen", GEN["bankje"], 10.8, 9.6, 0.25),
             ("gen", GEN["bankje"], 3.2, 11.2, 0.25), ("gen", GEN["bankje"], 5, 11.2, 0.25),
             ("gen", GEN["bankje"], 9, 11.2, 0.25), ("gen", GEN["bankje"], 10.8, 11.2, 0.25),
-            ("gen", GEN["boompje"], 1, 12.3, 0.5), ("gen", GEN["boompje"], 13, 12.3, 0.5),
+            ("gen", GEN["boompje"], 1.1, 11.5, 0.5), ("gen", GEN["boompje"], 12.9, 11.5, 0.5),
         ],
     },
     # Stal (Stardew-barn): lange voederbakken tegen de noordmuur, boer Bram
@@ -347,19 +350,19 @@ KAMERS = {
     # ijshoorn-beeld, tafeltjes met gekleurde krukken in de zitzone.
     "ijssalon": {
         "b": 13, "h": 10, "vloer": "rozediamant", "wand": "rozechecker",
-        "kleden": [(KEUKEN, 259, 6, 8.9)],
+        "kleden": [(KEUKEN, 259, 6, 8.2)],
         "meubels": [
             (IJS, 2, 1.8, 3.9, 0.5),        # softijsmachine-counter
             ("gen", GEN["raam_gordijn_roze"], 6.5, 1.3, 0.0, False),
             (IJS, 13, 9, 1.3, 0.0, False),  # menubord
             (IJS, 101, 11, 3.9, 0.5),       # toppings-counter
-            (IJS, 28, 4.5, 5.6, 0.35), (IJS, 34, 6.2, 5.6, 0.35), (IJS, 43, 7.9, 5.6, 0.35),
-            (IJS, 100, 9.7, 5.6, 0.35),     # kassa-counter
-            (IJS, 75, 11.9, 7.8, 0.5),      # ijshoorn-beeld
-            (REC, 1, 2.5, 8.2, 0.3),        # tafeltje links
-            (REC, 103, 1.4, 8.1, 0.25), (REC, 105, 3.6, 8.1, 0.25),
-            (REC, 2, 10.5, 8.6, 0.3),       # tafeltje rechts
-            (REC, 107, 9.4, 8.5, 0.25),
+            (IJS, 28, 2.5, 5.6, 0.35), (IJS, 34, 4.2, 5.6, 0.35), (IJS, 43, 5.9, 5.6, 0.35),
+            (IJS, 100, 7.7, 5.6, 0.35),     # kassa-counter, rij begint bij de muur
+            (IJS, 75, 11.6, 7.6, 0.5),      # ijshoorn-beeld
+            (REC, 1, 2.5, 8.4, 0.3),        # tafeltje links
+            (REC, 103, 1.4, 8.3, 0.25), (REC, 105, 3.6, 8.3, 0.25),
+            (REC, 2, 10.2, 8.3, 0.3),       # tafeltje rechts
+            (REC, 107, 9.1, 8.2, 0.25),
         ],
     },
 }

@@ -161,6 +161,12 @@ TRAMPOLINE = asset("me_villa", "v10")
 BOOMHUT = asset("me_villa", "v14")
 SPEELTOESTEL = prop("13_School_Singles_48x48/*Yard_Toy_1.png")
 WIPTOESTEL = prop("13_School_Singles_48x48/*Yard_Toy_11.png")
+LIGSTOEL1 = prop("14_Swimming_Pool_Singles_48x48/*Sunbed_1.png")
+LIGSTOEL2 = prop("14_Swimming_Pool_Singles_48x48/*Sunbed_5.png")
+ROTS1 = prop("11_Camping_Singles_48x48/*Rock_2.png")
+ROTS2 = prop("11_Camping_Singles_48x48/*Rock_5.png")
+BADMEESTERSTOEL = prop("14_Swimming_Pool_Singles_48x48/*Lifeguard_Chair_1.png")
+BADSPEELGOED = prop("14_Swimming_Pool_Singles_48x48/*Toy_Floating_1.png")
 
 # ---------- terrein-grids ----------
 stoep = [[False] * W for _ in range(H)]
@@ -193,6 +199,8 @@ vul(stoep, 68, 60, 76, 61)      # pad brandweer
 
 # water: vijver bij de kerk; zwembadbad apart (eigen familie)
 vul(water, 6, 56, 13, 63)
+vul(water, 9, 54, 12, 55)      # lob aan de noordkant: organischere vijvervorm
+vul(stoep, 56, 12, 63, 17)     # tegelrand rond het zwembad
 vul(bad, 57, 13, 62, 16)
 
 objecten = []
@@ -278,6 +286,14 @@ if WIPTOESTEL: zet(WIPTOESTEL, 27, 52, boven=0.0)
 # zwembad is een buitenlocatie zonder gebouw: alleen een zone bij het bad
 locaties.append({"naam": "Zwembad", "tafel": 6, "binnen": None,
                  "deur": [57 * TILE, 17 * TILE, 6 * TILE, 60], "bordpos": [60 * TILE, 18 * TILE]})
+if LIGSTOEL1: zet(LIGSTOEL1, 64.6, 13.6, boven=0.0)
+if LIGSTOEL2: zet(LIGSTOEL2, 66.2, 13.6, boven=0.0)
+if BADMEESTERSTOEL: zet(BADMEESTERSTOEL, 55.4, 13.5, boven=0.5)
+if BADSPEELGOED: zet(BADSPEELGOED, 59.5, 14.8, boven=0.0, solide=False)
+# vijver-hoekje bij de kerk: bankje en rotsen breken de strakke oever
+if BANK: zet(BANK, 15.5, 59, boven=0.2)
+if ROTS1: zet(ROTS1, 5.4, 57, boven=0.2)
+if ROTS2: zet(ROTS2, 13.6, 62.5, boven=0.2)
 
 # plein-decoratie
 if FONTEIN: zet(FONTEIN, 51, 36, boven=0.3)
