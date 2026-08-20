@@ -3,7 +3,7 @@
 // Schaakhelden: eerst cache, dan netwerk; alles wat binnenkomt gaat de cache
 // in, dus na een keer spelen werkt het spel volledig offline.
 // Nieuwe versie uitbrengen? Verhoog het nummer hieronder.
-const CACHE = 'tafeldorp-v2';
+const CACHE = 'tafeldorp-v3';
 
 const START = ['.', 'index.html', 'manifest.webmanifest'];
 

@@ -78,6 +78,13 @@ tier 2, Pierre's General Store, Stardrop Saloon, Barn — wiki-screenshots):
 - Winkel = kassa bij de deur plus stelling-eilanden met brede gangpaden
   (Pierre's), stal = voederbakken tegen de noordmuur plus los hooi (Barn).
 
+Muren (20 aug 2026): echte LimeZu-muren, met stukken gecropt uit het
+Generic Home-design (`6_Home_Designs`): noordmuur 96px (witte top plus
+wandvlak met contour), zijmuren 45px dik, dunne zuidkap, binnenmuren met
+volledig profiel en nette einden; witte randen lopen om de hoeken door.
+Per kamer een `muurtint` (multiply over het vlak) voor eigen sfeer. De
+Home Designs zelf (complete shells) zijn een optie voor latere upgrades.
+
 Assets: Modern Interiors thema-singles op nummer, gekozen via de contact
 sheets uit `scripts/contact-interieurs.py` (output `scripts/contact/`,
 gitignored). Generic-items (kleden, ramen, banken, planten) komen als

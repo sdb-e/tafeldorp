@@ -55,6 +55,32 @@ WAND = {
 RAND_DONKER = (42, 36, 56, 255)
 RAND_LICHT = (214, 210, 224, 255)
 
+# LimeZu-muurstukken uit het Generic Home-design (6_Home_Designs): echte
+# Room_Builder-look voor alle kamers. Maten: noordmuur 96px (witte top 18 +
+# wandvlak 81 incl contour), zijmuur 45px dik (rand 18 + vlak 24 + lijn 3),
+# zuidkap 18px.
+_GH = Image.open(VENDOR / "modern-interiors" / "6_Home_Designs" /
+                 "Generic_Home_Designs" / "48x48" /
+                 "Generic_Home_1_Layer_1_48x48.png").convert("RGBA")
+N_VLAK = _GH.crop((192, 15, 240, 96))      # 48x81 wandvlak met contourlijnen
+ZIJ_GRIJS = _GH.crop((579, 528, 603, 576))  # 24x48 zijwand-vlak
+WIT = (248, 248, 248, 255)
+DONKER = (58, 58, 80, 255)
+RAND = 18
+ZIJ = RAND + 24 + 3
+NOORD = 96
+ZUID = 18
+
+
+def getint(img, kleur):
+    """Multiply-tint op een muurvlak; contouren blijven donker."""
+    if kleur is None:
+        return img
+    arr = np.array(img).astype(float)
+    for i in range(3):
+        arr[..., i] *= kleur[i] / 255.0
+    return Image.fromarray(arr.clip(0, 255).astype("uint8"))
+
 # NPC-plekken (spiegel van src/core/locaties.ts) voor de debug-render
 NPC_PLEK = {
     "thuis": {"tx": 3.2, "ty": 5.6},
@@ -159,6 +185,7 @@ KAMERS = {
     # vloerwissel), slaapkamer | hal beneden. Mama bij het aanrecht (3.2, 5.6).
     "thuis": {
         "b": 18, "h": 15, "vloer": "parket", "wand": "taupe", "mat_bx": 13,
+        "muurtint": (255, 244, 225),
         "zones": [
             (0, 2, 7, 7, "grijslicht"),     # keuken (geblokte zone in het hout)
             (0, 10, 7, 14, "rozediamant"),  # slaapkamer
@@ -178,7 +205,7 @@ KAMERS = {
             (KEUKEN, 153, 3, 3.9, 0.5),     # fornuis
             (KEUKEN, 143, 4.2, 3.85, 0.45),  # spoelbak
             (KEUKEN, 113, 5.4, 3.85, 0.45),  # aanrecht
-            ("gen", GEN["raam_hout"], 6.6, 1.3, 0.0, False),
+            ("gen", GEN["raam_hout"], 6.6, 1.55, 0.0, False),
             (KEUKEN, 296, 4, 6.6, 0.3),     # eettafel
             (KEUKEN, 384, 4, 6.68, 0.0, False),   # bord met eten op tafel
             (KEUKEN, 371, 2.7, 6.5, 0.3), (KEUKEN, 368, 5.3, 6.5, 0.3),
@@ -186,7 +213,7 @@ KAMERS = {
             (LR, 89, 10, 4, 0.65),          # staande klok
             ("gen", GEN["raam_gordijn_beige"], 11.9, 1.68, 0.0, False),
             (LR, 110, 14, 4, 0.55),         # haard
-            ("gen", GEN["schilderij_vuur"], 16.2, 1.3, 0.0, False),
+            ("gen", GEN["schilderij_vuur"], 16.2, 1.5, 0.0, False),
             (LR, 37, 16.4, 4, 0.55),        # kast
             (LR, 29, 12, 5.9, 0.35),        # bank op het kleed
             (REC, 204, 14.7, 5.9, 0.35),    # fauteuil
@@ -205,13 +232,14 @@ KAMERS = {
     # toonbank met vitrines scheidt papa (5.5, 4.4) van de klantenruimte.
     "bakkerij": {
         "b": 14, "h": 10, "vloer": "beige", "wand": "streep",
+        "muurtint": (255, 228, 190),
         "kleden": [(KEUKEN, 226, 10.5, 8.4)],
         "meubels": [
             (GROC, 253, 1.6, 3.95, 0.5), (GROC, 254, 3.4, 3.95, 0.5),   # ovens
             (GROC, 203, 5.4, 3.9, 0.5), (GROC, 205, 7.2, 3.9, 0.5),     # broodrekken
             (GROC, 250, 9, 3.9, 0.5),       # stokbroodrek
-            ("gen", GEN["raam_rood"], 10.9, 1.3, 0.0, False),
-            (GROC, 89, 12.5, 1.15, 0.0, False),   # aanbiedingsbord
+            ("gen", GEN["raam_rood"], 10.9, 1.55, 0.0, False),
+            (GROC, 89, 12.5, 1.45, 0.0, False),   # aanbiedingsbord
             (KEUKEN, 407, 2.6, 5.6, 0.35), (KEUKEN, 408, 4.6, 5.6, 0.35),  # vitrines
             (GROC, 171, 6.5, 5.6, 0.35),    # kassa
             (REC, 3, 10.5, 7.6, 0.3),       # tafeltje in de winkel
@@ -224,11 +252,12 @@ KAMERS = {
     # koelwand en groentekasten achter, stelling-eilanden in het midden.
     "supermarkt": {
         "b": 16, "h": 12, "vloer": "grijslicht", "wand": "taupe",
+        "muurtint": (235, 240, 245),
         "meubels": [
-            (GROC, 2, 1, 1.15, 0.0, False),   # OPEN-bord
+            (GROC, 2, 1.2, 1.45, 0.0, False),   # OPEN-bord
             (GROC, 61, 4.6, 3.9, 0.5), (GROC, 66, 6.6, 3.9, 0.5), (GROC, 71, 8.6, 3.9, 0.5),
             (GROC, 427, 11, 3.9, 0.45), (GROC, 428, 13.2, 3.9, 0.45),  # groente-uitstalling
-            (GROC, 88, 14.9, 1.15, 0.0, False),   # prijsbord
+            (GROC, 88, 14.6, 1.45, 0.0, False),   # prijsbord
             (GROC, 171, 2.2, 6.7, 0.35),    # kassa bij de muur, verkoper erachter
             (GROC, 121, 1.2, 8.4, 0.3),     # winkelmanden voor de balie
             (GROC, 98, 6.5, 7.5, 0.5), (GROC, 100, 9.5, 7.5, 0.5), (GROC, 102, 12.5, 7.5, 0.5),
@@ -241,13 +270,14 @@ KAMERS = {
     # tafeltjes in twee rijen, boekenkasten in de hoeken.
     "school": {
         "b": 16, "h": 12, "vloer": "plankgeel", "wand": "rozeplank",
+        "muurtint": (255, 245, 205),
         "kleden": [("gen", GEN["kleed_klein_groen"], 3, 7.85)],
         "meubels": [
             (KLAS, 45, 0.9, 3.9, 0.55), (KLAS, 47, 2.6, 3.9, 0.55),  # boekenkasten
             (KLAS, 39, 5.5, 4.2, 0.45),     # schoolbord op poten
-            (KLAS, 31, 9.5, 1.15, 0.0, False),   # wereldkaart
-            (KLAS, 32, 11.5, 1.15, 0.0, False),  # stickerkaart
-            (KLAS, 33, 13.4, 1.15, 0.0, False),  # prikbord
+            (KLAS, 31, 9.5, 1.45, 0.0, False),   # wereldkaart
+            (KLAS, 32, 11.5, 1.45, 0.0, False),  # stickerkaart
+            (KLAS, 33, 13.4, 1.45, 0.0, False),  # prikbord
             (KLAS, 60, 14.2, 3.9, 0.55),    # kast rechtsachter
             (KLAS, 25, 3, 7.4, 0.3),        # juf-bureau, juf erachter
             (KLAS, 9, 6.5, 7.5, 0.3), (KLAS, 11, 9.5, 7.5, 0.3), (KLAS, 7, 12.5, 7.5, 0.3),
@@ -259,11 +289,12 @@ KAMERS = {
     # balie rechts waar de bibliothecaresse staat (13.6, 4.6), leeshoek rechtsonder.
     "bieb": {
         "b": 16, "h": 12, "vloer": "houtdonker", "wand": "baksteenbruin",
+        "muurtint": (240, 225, 200),
         "kleden": [("gen", GEN["kleed_grijs"], 12, 10.3)],
         "meubels": [
             (KLAS, 74, 1, 3.9, 0.55), (KLAS, 70, 2.9, 3.9, 0.55), (KLAS, 62, 4.8, 3.9, 0.55),
             (KLAS, 64, 6.7, 3.9, 0.55), (KLAS, 72, 8.6, 3.9, 0.55),
-            ("gen", GEN["raam_bruin"], 11, 1.3, 0.0, False),
+            ("gen", GEN["raam_bruin"], 11, 1.55, 0.0, False),
             (KLAS, 59, 14.9, 3.9, 0.55),    # smalle kast in de noordoost-hoek
             (KLAS, 49, 13.6, 5.8, 0.35),    # uitleenbalie
             (KLAS, 43, 3.5, 7, 0.45), (KLAS, 44, 7, 7, 0.45),   # schap-eilanden
@@ -278,6 +309,7 @@ KAMERS = {
     # (9, 6.2), matten midden, krachthoek links, boksbal rechts.
     "sporthal": {
         "b": 18, "h": 13, "vloer": "grijs", "wand": "taupe",
+        "muurtint": (225, 230, 238),
         "meubels": [
             (GYM, 131, 2.2, 3.35, 0.5), (GYM, 131, 4, 3.35, 0.5),   # spiegels
             (GYM, 186, 6.5, 4, 0.35), (GYM, 187, 8.5, 4, 0.35),   # loopbanden
@@ -297,6 +329,7 @@ KAMERS = {
     # Mees staat vrij in het midden (6.5, 5.4).
     "molen": {
         "b": 12, "h": 10, "vloer": "plankoud", "wand": "kist",
+        "muurtint": (235, 215, 185),
         "meubels": [
             (REC, 64, 1.2, 3.85, 0.4), (REC, 65, 2.9, 3.8, 0.4),   # kratten
             (GROC, 436, 5, 3.75, 0.3), (GROC, 437, 6.8, 3.75, 0.3),  # meelzakken
@@ -311,6 +344,7 @@ KAMERS = {
     # met een loper als middenpad naar de deur. Arena van de Tafeldraak.
     "kerk": {
         "b": 14, "h": 13, "vloer": "visgraat", "wand": "baksteenrood",
+        "muurtint": (255, 215, 195),
         "kleden": [
             ("gen", GEN["kleed_paars"], 7, 6.2),   # altaarkleed
             ("gen", GEN["loper_bruin"], 7, 12.4),
@@ -332,6 +366,7 @@ KAMERS = {
     # ervoor (7, 5.2), hooi los op de vloer, vaten en kratten in de hoeken.
     "boerderij": {
         "b": 14, "h": 10, "vloer": "plankoud", "wand": "plankdonker",
+        "muurtint": (230, 210, 180),
         "meubels": [
             (REC, 66, 1, 3.85, 0.4),        # krat
             ("farm", "^Manger_Horizontal_Full", 3.5, 3.8, 0.45),
@@ -350,11 +385,12 @@ KAMERS = {
     # ijshoorn-beeld, tafeltjes met gekleurde krukken in de zitzone.
     "ijssalon": {
         "b": 13, "h": 10, "vloer": "rozediamant", "wand": "rozechecker",
+        "muurtint": (255, 228, 235),
         "kleden": [(KEUKEN, 259, 6, 8.2)],
         "meubels": [
             (IJS, 2, 1.8, 3.9, 0.5),        # softijsmachine-counter
-            ("gen", GEN["raam_gordijn_roze"], 6.5, 1.3, 0.0, False),
-            (IJS, 13, 9, 1.3, 0.0, False),  # menubord
+            ("gen", GEN["raam_gordijn_roze"], 6.5, 1.55, 0.0, False),
+            (IJS, 13, 9, 1.5, 0.0, False),  # menubord
             (IJS, 101, 11, 3.9, 0.5),       # toppings-counter
             (IJS, 28, 2.5, 5.6, 0.35), (IJS, 34, 4.2, 5.6, 0.35), (IJS, 43, 5.9, 5.6, 0.35),
             (IJS, 100, 7.7, 5.6, 0.35),     # kassa-counter, rij begint bij de muur
@@ -374,7 +410,6 @@ def bouw(kid, cfg):
     boven = Image.new("RGBA", (w, h), (0, 0, 0, 0))
 
     vloer = VLOER[cfg["vloer"]]
-    wtop, wbot = WAND[cfg["wand"]]
     for ty in range(2, Hh):
         for tx in range(B):
             onder.paste(vloer, (tx * TILE, ty * TILE))
@@ -383,59 +418,106 @@ def bouw(kid, cfg):
         for ty in range(zy0, zy1 + 1):
             for tx in range(zx0, zx1 + 1):
                 onder.paste(zv, (tx * TILE, ty * TILE))
-    for tx in range(B):
-        onder.paste(wtop, (tx * TILE, 14))
-        onder.paste(wbot, (tx * TILE, 14 + TILE))
 
-    # dikke witte muur-kap rondom (Home Designs-look) met deuropening onderaan
+    # Echte LimeZu-muren (stukken uit het Generic Home-design): noordmuur met
+    # wandvlak en witte top, zijmuren met dikte, dunne zuidkap, en witte
+    # randen die netjes om de hoeken doorlopen.
     d = ImageDraw.Draw(onder)
-    KAP = 16
-    WIT = (238, 238, 242, 255)
-    DONKER = (38, 34, 51, 255)
     mat_bx = cfg.get("mat_bx", B // 2)
     deur_x0, deur_x1 = (mat_bx - 1) * TILE + 4, (mat_bx + 1) * TILE - 4
 
-    def kapvlak(x0, y0, x1, y1):
-        d.rectangle([x0, y0, x1, y1], fill=WIT, outline=DONKER, width=3)
+    def rand_horizontaal(x0, x1, y):
+        d.rectangle([x0, y, x1 - 1, y + 2], fill=DONKER)
+        d.rectangle([x0, y + 3, x1 - 1, y + 14], fill=WIT)
+        d.rectangle([x0, y + 15, x1 - 1, y + 17], fill=DONKER)
 
-    kapvlak(0, 0, w - 1, KAP + 2)                      # boven
-    kapvlak(0, 0, KAP + 2, h - 1)                      # links
-    kapvlak(w - KAP - 3, 0, w - 1, h - 1)              # rechts
-    kapvlak(0, h - KAP - 3, deur_x0, h - 1)            # onder, links van de deur
-    kapvlak(deur_x1, h - KAP - 3, w - 1, h - 1)        # onder, rechts van de deur
-    # vloer-schaduw onder de noordmuur
-    d.rectangle([KAP, 2 * TILE + 14, w - KAP - 4, 2 * TILE + 21], fill=(20, 16, 30, 70))
+    def rand_verticaal(x, y0, y1):
+        d.rectangle([x, y0, x + 2, y1 - 1], fill=DONKER)
+        d.rectangle([x + 3, y0, x + 14, y1 - 1], fill=WIT)
+        d.rectangle([x + 15, y0, x + 17, y1 - 1], fill=DONKER)
+
+    n_vlak = getint(N_VLAK, cfg.get("muurtint"))
+    zij_grijs = getint(ZIJ_GRIJS, cfg.get("muurtint"))
+
+    def noordvlak(x0, x1, y):
+        """Wandvlak (81px hoog) getegeld over [x0, x1)."""
+        for x in range(x0, x1, TILE):
+            onder.paste(n_vlak.crop((0, 0, min(TILE, x1 - x), 81)), (x, y))
+
+    # 1. noordmuur: witte top + wandvlak over de volle breedte
+    d.rectangle([0, 0, w - 1, 2], fill=DONKER)
+    d.rectangle([0, 3, w - 1, 14], fill=WIT)
+    noordvlak(0, w, 15)
+    # 2. zuidkap met deuropening
+    rand_horizontaal(0, deur_x0, h - ZUID)
+    rand_horizontaal(deur_x1, w, h - ZUID)
+    d.rectangle([deur_x0 - 2, h - ZUID, deur_x0, h - 1], fill=DONKER)
+    d.rectangle([deur_x1, h - ZUID, deur_x1 + 2, h - 1], fill=DONKER)
+    # 3. zijwand-vlakken tussen noordmuur en zuidkap
+    for y in range(NOORD, h - ZUID, TILE):
+        hh = min(TILE, h - ZUID - y)
+        onder.paste(zij_grijs.crop((0, 0, 24, hh)), (RAND, y))
+        onder.paste(zij_grijs.crop((0, 0, 24, hh)), (w - RAND - 24, y))
+    d.rectangle([RAND + 24, NOORD, RAND + 26, h - ZUID - 1], fill=DONKER)
+    d.rectangle([w - RAND - 27, NOORD, w - RAND - 25, h - ZUID - 1], fill=DONKER)
+    # 4. witte buitenranden links en rechts, over de volle hoogte (hoeken)
+    rand_verticaal(0, 0, h)
+    rand_verticaal(w - RAND, 0, h)
     # deurmat in de opening
     d.rectangle([deur_x0 + 2, h - 30, deur_x1 - 2, h - 4], fill=(120, 88, 56, 255))
     d.rectangle([deur_x0 + 6, h - 26, deur_x1 - 6, h - 8], fill=(158, 118, 76, 255))
 
-    # binnenmuren: horizontaal = muurvlak (wandpaar), verticaal = witte kap
+    # binnenmuren: horizontaal = volledig muurprofiel (witte top + wandvlak),
+    # verticaal = witte wandband; segmentuiteinden krijgen een nette afsluiting
     hwanden = cfg.get("hwanden", [])
     vwanden = cfg.get("vwanden", [])
     binnen_collisions = []
     for (my, mx0, mx1, gat0, gat1) in hwanden:
+        py = my * TILE
+        segmenten = []
+        seg = None
         for tx in range(mx0, mx1 + 1):
             if gat0 is not None and gat0 <= tx <= gat1:
+                seg = None
                 continue
-            onder.paste(wtop, (tx * TILE, my * TILE))
-            onder.paste(wbot, (tx * TILE, (my + 1) * TILE))
-            d.rectangle([tx * TILE, my * TILE - 8, (tx + 1) * TILE, my * TILE],
-                        fill=WIT, outline=DONKER, width=2)
-            binnen_collisions.append([tx * TILE, my * TILE - 8, TILE, 2 * TILE + 8])
+            if seg is None:
+                seg = [tx, tx]
+                segmenten.append(seg)
+            seg[1] = tx
+        for (sx0, sx1) in segmenten:
+            x0, x1 = sx0 * TILE, (sx1 + 1) * TILE
+            rand_horizontaal(x0, x1, py - ZUID)
+            noordvlak(x0, x1, py)
+            d.rectangle([x0, py + 81, x1 - 1, py + 83], fill=DONKER)
+            # verticale afsluiting aan beide uiteinden
+            d.rectangle([x0, py - ZUID, x0 + 2, py + 83], fill=DONKER)
+            d.rectangle([x1 - 3, py - ZUID, x1 - 1, py + 83], fill=DONKER)
+            binnen_collisions.append([x0, py - ZUID, x1 - x0, 84 + ZUID])
     for (mx, my0, my1, gat0, gat1) in vwanden:
+        px = mx * TILE - 9
+        segmenten = []
+        seg = None
         for ty in range(my0, my1 + 1):
             if gat0 is not None and gat0 <= ty <= gat1:
+                seg = None
                 continue
-            d.rectangle([mx * TILE - 9, ty * TILE, mx * TILE + 9, (ty + 1) * TILE],
-                        fill=WIT, outline=DONKER, width=2)
-            binnen_collisions.append([mx * TILE - 11, ty * TILE, 22, TILE])
+            if seg is None:
+                seg = [ty, ty]
+                segmenten.append(seg)
+            seg[1] = ty
+        for (sy0, sy1) in segmenten:
+            y0, y1 = sy0 * TILE, (sy1 + 1) * TILE
+            rand_verticaal(px, y0, y1)
+            d.rectangle([px, y0, px + 17, y0 + 2], fill=DONKER)
+            d.rectangle([px, y1 - 3, px + 17, y1 - 1], fill=DONKER)
+            binnen_collisions.append([px - 2, y0, 22, y1 - y0])
 
     collisions = [
-        [0, 0, w, 2 * TILE + 12],          # noordmuur
-        [0, 0, KAP + 4, h],                # links
-        [w - KAP - 4, 0, KAP + 4, h],      # rechts
-        [0, h - KAP - 6, deur_x0, KAP + 6],
-        [deur_x1, h - KAP - 6, w - deur_x1, KAP + 6],
+        [0, 0, w, NOORD - 4],              # noordmuur
+        [0, 0, ZIJ + 2, h],                # links
+        [w - ZIJ - 2, 0, ZIJ + 2, h],      # rechts
+        [0, h - ZUID - 4, deur_x0, ZUID + 4],
+        [deur_x1, h - ZUID - 4, w - deur_x1, ZUID + 4],
     ] + binnen_collisions
 
     # vloerkleden: onder alle meubels, geen botsing
